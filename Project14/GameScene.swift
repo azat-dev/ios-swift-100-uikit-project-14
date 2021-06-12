@@ -9,9 +9,6 @@ import SpriteKit
 
 class GameScene: SKScene {
     override func didMove(to view: SKView) {
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let background = SKSpriteNode(imageNamed: "whackBackground")
         background.zPosition = -1
         background.position = CGPoint(x: 512, y: 384)
@@ -24,5 +21,9 @@ class GameScene: SKScene {
         scoreLabel.position = CGPoint(x: 8, y: 8)
         scoreLabel.text = "Score: 0"
         addChild(scoreLabel)
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
     }
 }
